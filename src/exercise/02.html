@@ -7,8 +7,12 @@
   <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
   <script type="module">
     const rootElement = document.getElementById('root')
-    const props = {children: 'Hello World', className: 'container'}
-    const reactElement = React.createElement('div', props)
-    ReactDOM.render(reactElement, rootElement)
+    const childrenText = ['Hello', 'World']
+    const children = childrenText.map(child =>
+      React.createElement('span', {children: child}),
+    )
+    const props = {children, className: 'container'}
+    const container = React.createElement('div', props)
+    ReactDOM.render(container, rootElement)
   </script>
 </body>
