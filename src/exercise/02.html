@@ -9,7 +9,7 @@
     const rootElement = document.getElementById('root')
     const childrenText = ['Hello', 'World']
     const children = childrenText.map(child =>
-      React.createElement('span', {children: child}),
+      React.createElement('span', {children: child, key: child}),
     )
     const props = {children, className: 'container'}
     const container = React.createElement('div', props)
