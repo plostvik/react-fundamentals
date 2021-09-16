@@ -7,17 +7,13 @@
   <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
   <script type="text/babel">
-    function message(props) {
+    function Message(props) {
       return <div {...props} />
     }
     const element = (
       <div className="container">
-        {React.createElement(message, {
-          children: 'Hello World',
-        })}
-        {React.createElement(message, {
-          children: 'Goodbye World',
-        })}
+        <Message children="Hello world" />
+        <Message children="Goodbye world" />
       </div>
     )
     ReactDOM.render(element, document.getElementById('root'))
