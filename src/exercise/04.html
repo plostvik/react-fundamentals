@@ -12,8 +12,12 @@
     }
     const element = (
       <div className="container">
-        {message({children: 'Hello World'})}
-        {message({children: 'Goodbye World'})}
+        {React.createElement(message, {
+          children: 'Hello World',
+        })}
+        {React.createElement(message, {
+          children: 'Goodbye World',
+        })}
       </div>
     )
     ReactDOM.render(element, document.getElementById('root'))
